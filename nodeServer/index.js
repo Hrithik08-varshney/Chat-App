@@ -1,13 +1,16 @@
 //node server to handle socket io connections
 
-const io = require("socket.io")(8000);
+const io = require("socket.io")(8000, {
+  cors: {
+    origin: "*",
+  },
+});
 
 const users = {};
 //server to listen incoming events
 io.on("connection", (socket) => {
   //particular connection handle ->  event acceptance
   socket.on("new-user-joined", (name) => {
-    console.log(name, "name");
     users[socket.id] = name;
     socket.broadcast.emit("user-joined", name); //jis insan ne join kiya usko chodkar sabko event emit kar dega
   });
