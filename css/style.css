@@ -1,7 +1,7 @@
 body {
-  background-image: linear-gradient(rgb(255, 255, 255), purple);
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-color: #B85042;
+  height: calc(100vh - 20px);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .logo {
@@ -9,19 +9,29 @@ body {
   margin: auto;
   width: 100px;
   height: 100px;
+  @media (max-width: 320px) {
+    width: 70px;
+    height: 70px;
+  }
 }
 
-h1{
+h1 {
   margin-top: 12px;
   font-size: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  color: white;
+
+  @media (max-width: 320px) {
+    margin-top: 10px;
+    font-size: 25px;
+  }
 }
 
 .container {
   max-width: 955px;
   height: 60vh;
-  background-color: aqua;
+  background-color: #E7E8D1;
   margin: auto;
   border: 2px solid black;
   overflow-y: auto;
@@ -30,11 +40,12 @@ h1{
 
 .message {
   background-color: gray;
-  width: 24%;
+  max-width: 50%;
   padding: 10px;
   margin: 17px 12px;
   border: 2px solid black;
   border-radius: 10px;
+  color: white;
 }
 
 .left {
@@ -56,10 +67,23 @@ h1{
 }
 
 #messageInp {
-  width: 92%;
+  width: 90%;
   border: 2px solid black;
   border-radius: 6px;
   height: 34px;
+  color: black;
+  background-color: #A7BEAE;
+
+  @media (max-width: 610px) {
+    width: 85%;
+  }
+
+  @media (max-width: 420px) {
+    width: 80%;
+  }
+  @media (max-width: 320px) {
+    width: 70%;
+  }
 }
 
 .btn {
@@ -67,4 +91,5 @@ h1{
   border: 2px solid black;
   border-radius: 6px;
   height: 34px;
+  background-color: #E7E8D1;
 }
